@@ -8,7 +8,6 @@
 
 #import "A4Kit.h"
 #import "A4SysexHelper.h"
-#import "NSData+MachinedrumBundle.h"
 
 @interface A4Kit()
 @property (strong, nonatomic) NSMutableArray *sounds;
@@ -98,7 +97,10 @@
     
 	dispatch_once(&onceToken, ^{
         
-		kitData = [NSData dataFromMachinedrumBundleResourceWithName:@"defaultKit" ofType:@"payload"];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"A4KitDefault" ofType:@"payload"]];
+		NSAssert(data != nil, @"default kit resource not found. copy the resource into your app resources group");
+		kitData = data;
+
 		
     });
 	

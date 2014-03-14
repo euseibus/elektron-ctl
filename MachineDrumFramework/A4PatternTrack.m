@@ -9,7 +9,6 @@
 #import "A4PatternTrack.h"
 #import "A4Pattern.h"
 #import "MDMath.h"
-#import "NSData+MachinedrumBundle.h"
 
 @implementation A4PatternTrack
 

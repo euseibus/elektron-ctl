@@ -8,7 +8,6 @@
 
 #import "A4Pattern.h"
 #import "A4PatternTrack.h"
-#import "NSData+MachinedrumBundle.h"
 #import "A4SysexHelper.h"
 #import "MDMath.h"
 
@@ -241,7 +240,9 @@ uint8_t A4PatternPulsesPerStepForTimescale(A4PatternTimeScale timeScale)
     
 	dispatch_once(&onceToken, ^{
         
-		patternData = [NSData dataFromMachinedrumBundleResourceWithName:@"defaultPattern" ofType:@"payload"];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"A4PatternDefault" ofType:@"payload"]];
+		NSAssert(data != nil, @"default pattern resource not found. copy the resource into your app resources group");
+		patternData = data;
 		
     });
 	

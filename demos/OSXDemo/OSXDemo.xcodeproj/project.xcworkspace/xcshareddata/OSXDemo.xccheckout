@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EE63A07B-B5FA-4F34-AE21-EF802E63A9C3</string>
+	<string>AD68149C-AC36-4553-9065-A49C230DBE11</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MachineDrumFramework</string>
+	<string>OSXDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3711BE03-F59F-4A9A-AEC8-E0A3959973A0</key>
 		<string>https://github.com/jpenca/elektron-ctl.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MachineDrumFramework.xcodeproj/project.xcworkspace</string>
+	<string>demos/OSXDemo/OSXDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3711BE03-F59F-4A9A-AEC8-E0A3959973A0</key>
-		<string>../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jpenca/elektron-ctl.git</string>

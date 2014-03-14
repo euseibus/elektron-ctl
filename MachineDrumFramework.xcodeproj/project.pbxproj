@@ -19,26 +19,12 @@
 		361C1FDA17DFF71000C3E02C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361C1FD817DFF71000C3E02C /* AVFoundation.framework */; };
 		3623ED6017F7197F00387DC8 /* A4Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED5F17F7197F00387DC8 /* A4Project.m */; };
 		3623ED6117F7197F00387DC8 /* A4Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED5F17F7197F00387DC8 /* A4Project.m */; };
-		3623ED8617F7638100387DC8 /* NSData+MachinedrumBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED8517F7638100387DC8 /* NSData+MachinedrumBundle.m */; };
-		3623ED8717F7638100387DC8 /* NSData+MachinedrumBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED8517F7638100387DC8 /* NSData+MachinedrumBundle.m */; };
-		3623ED8A17F763CC00387DC8 /* NSBundle+MachinedrumBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED8917F763CC00387DC8 /* NSBundle+MachinedrumBundle.m */; };
-		3623ED8B17F763CC00387DC8 /* NSBundle+MachinedrumBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623ED8917F763CC00387DC8 /* NSBundle+MachinedrumBundle.m */; };
-		3623EDA217F7B9D400387DC8 /* defaultKit.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* defaultKit.payload */; };
-		3623EDA317F7B9D400387DC8 /* defaultKit.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* defaultKit.payload */; };
-		3623EDA617F7B9D400387DC8 /* defaultPattern.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* defaultPattern.payload */; };
-		3623EDA717F7B9D400387DC8 /* defaultPattern.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* defaultPattern.payload */; };
-		3623EDAA17F7B9D400387DC8 /* defaultSound.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* defaultSound.payload */; };
-		3623EDAB17F7B9D400387DC8 /* defaultSound.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* defaultSound.payload */; };
-		3623EDB717F7BC7A00387DC8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623EDB617F7BC7A00387DC8 /* CoreFoundation.framework */; };
-		3623EDBD17F7BC7A00387DC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDBB17F7BC7A00387DC8 /* InfoPlist.strings */; };
-		3623EDC217F7BCB700387DC8 /* defaultKit.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* defaultKit.payload */; };
-		3623EDC317F7BCB900387DC8 /* defaultPattern.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* defaultPattern.payload */; };
-		3623EDC417F7BCBC00387DC8 /* defaultSound.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* defaultSound.payload */; };
-		36260E58182FDA8C0038CE64 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623EDB617F7BC7A00387DC8 /* CoreFoundation.framework */; };
-		36260E5A182FDA8C0038CE64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDBB17F7BC7A00387DC8 /* InfoPlist.strings */; };
-		36260E5B182FDA8C0038CE64 /* defaultKit.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* defaultKit.payload */; };
-		36260E5C182FDA8C0038CE64 /* defaultSound.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* defaultSound.payload */; };
-		36260E5D182FDA8C0038CE64 /* defaultPattern.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* defaultPattern.payload */; };
+		3623EDA217F7B9D400387DC8 /* A4KitDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* A4KitDefault.payload */; };
+		3623EDA317F7B9D400387DC8 /* A4KitDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623ED9F17F7B9D400387DC8 /* A4KitDefault.payload */; };
+		3623EDA617F7B9D400387DC8 /* A4PatternDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* A4PatternDefault.payload */; };
+		3623EDA717F7B9D400387DC8 /* A4PatternDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA017F7B9D400387DC8 /* A4PatternDefault.payload */; };
+		3623EDAA17F7B9D400387DC8 /* A4SoundDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* A4SoundDefault.payload */; };
+		3623EDAB17F7B9D400387DC8 /* A4SoundDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 3623EDA117F7B9D400387DC8 /* A4SoundDefault.payload */; };
 		362A7EDD159A15D3007478D7 /* MDProc.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7EDC159A15D3007478D7 /* MDProc.m */; };
 		362A7EEC159A17B3007478D7 /* MDProcedureTrigGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7EEB159A17B3007478D7 /* MDProcedureTrigGenerator.m */; };
 		362A7EF0159A18A8007478D7 /* MDProcedureCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7EEF159A18A8007478D7 /* MDProcedureCondition.m */; };
@@ -289,24 +275,10 @@
 		3623ED6A17F7617100387DC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3623ED6B17F7617100387DC8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3623ED6C17F7617100387DC8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		3623ED6F17F7617200387DC8 /* MachinedrumBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MachinedrumBundle-Info.plist"; sourceTree = "<group>"; };
-		3623ED7117F7617200387DC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3623ED7317F7617200387DC8 /* MachinedrumBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MachinedrumBundle-Prefix.pch"; sourceTree = "<group>"; };
-		3623ED8417F7638100387DC8 /* NSData+MachinedrumBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MachinedrumBundle.h"; sourceTree = "<group>"; };
-		3623ED8517F7638100387DC8 /* NSData+MachinedrumBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MachinedrumBundle.m"; sourceTree = "<group>"; };
-		3623ED8817F763CC00387DC8 /* NSBundle+MachinedrumBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MachinedrumBundle.h"; sourceTree = "<group>"; };
-		3623ED8917F763CC00387DC8 /* NSBundle+MachinedrumBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MachinedrumBundle.m"; sourceTree = "<group>"; };
-		3623ED9A17F76BD500387DC8 /* MachinedrumBundleMac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MachinedrumBundleMac copy-Info.plist"; path = "/Users/jakob/Documents/code/MachineDrumFramework/MachinedrumBundleMac copy-Info.plist"; sourceTree = "<absolute>"; };
-		3623ED9F17F7B9D400387DC8 /* defaultKit.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultKit.payload; sourceTree = "<group>"; };
-		3623EDA017F7B9D400387DC8 /* defaultPattern.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultPattern.payload; sourceTree = "<group>"; };
-		3623EDA117F7B9D400387DC8 /* defaultSound.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultSound.payload; sourceTree = "<group>"; };
-		3623EDB517F7BC7900387DC8 /* MachinedrumBundle-Mac.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MachinedrumBundle-Mac.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3623ED9F17F7B9D400387DC8 /* A4KitDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4KitDefault.payload; sourceTree = "<group>"; };
+		3623EDA017F7B9D400387DC8 /* A4PatternDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4PatternDefault.payload; sourceTree = "<group>"; };
+		3623EDA117F7B9D400387DC8 /* A4SoundDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4SoundDefault.payload; sourceTree = "<group>"; };
 		3623EDB617F7BC7A00387DC8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		3623EDBA17F7BC7A00387DC8 /* MachinedrumBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MachinedrumBundle-Info.plist"; sourceTree = "<group>"; };
-		3623EDBC17F7BC7A00387DC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3623EDBE17F7BC7A00387DC8 /* MachinedrumBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MachinedrumBundle-Prefix.pch"; sourceTree = "<group>"; };
-		36260E61182FDA8C0038CE64 /* MachinedrumBundle-iOS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MachinedrumBundle-iOS.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36260E62182FDA8D0038CE64 /* MachinedrumBundle copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MachinedrumBundle copy-Info.plist"; path = "/Users/jakob/Documents/code/MachineDrumFramework/MachinedrumBundle copy-Info.plist"; sourceTree = "<absolute>"; };
 		362A7ED9159A155F007478D7 /* MDProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDProcedures.h; sourceTree = "<group>"; };
 		362A7EDB159A15D3007478D7 /* MDProc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDProc.h; sourceTree = "<group>"; };
 		362A7EDC159A15D3007478D7 /* MDProc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDProc.m; sourceTree = "<group>"; };
@@ -335,6 +307,7 @@
 		363D9C8A175A99CA00DC1ADF /* MDKitDiffs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKitDiffs.m; sourceTree = "<group>"; };
 		363D9C8B175A99CA00DC1ADF /* MDPatternDiffs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPatternDiffs.h; sourceTree = "<group>"; };
 		363D9C8C175A99CB00DC1ADF /* MDPatternDiffs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPatternDiffs.m; sourceTree = "<group>"; };
+		363EF2C618D3602300233B08 /* demos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = demos; sourceTree = "<group>"; };
 		36431AA317804B3F007283A9 /* MDSongRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSongRow.h; sourceTree = "<group>"; };
 		36431AA417804B3F007283A9 /* MDSongRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSongRow.m; sourceTree = "<group>"; };
 		36431AA717804B51007283A9 /* MDSongParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSongParser.h; sourceTree = "<group>"; };
@@ -519,22 +492,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3623EDB217F7BC7900387DC8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3623EDB717F7BC7A00387DC8 /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36260E57182FDA8C0038CE64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36260E58182FDA8C0038CE64 /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3631A8861646C3E3008DB7E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,30 +636,12 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		3623ED6D17F7617200387DC8 /* MachinedrumBundle */ = {
-			isa = PBXGroup;
-			children = (
-				3623ED6E17F7617200387DC8 /* Supporting Files */,
-			);
-			path = MachinedrumBundle;
-			sourceTree = "<group>";
-		};
-		3623ED6E17F7617200387DC8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3623ED6F17F7617200387DC8 /* MachinedrumBundle-Info.plist */,
-				3623ED7017F7617200387DC8 /* InfoPlist.strings */,
-				3623ED7317F7617200387DC8 /* MachinedrumBundle-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3623ED7717F7618300387DC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3623ED9F17F7B9D400387DC8 /* defaultKit.payload */,
-				3623EDA017F7B9D400387DC8 /* defaultPattern.payload */,
-				3623EDA117F7B9D400387DC8 /* defaultSound.payload */,
+				3623ED9F17F7B9D400387DC8 /* A4KitDefault.payload */,
+				3623EDA017F7B9D400387DC8 /* A4PatternDefault.payload */,
+				3623EDA117F7B9D400387DC8 /* A4SoundDefault.payload */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -710,34 +649,12 @@
 		3623ED8317F762F000387DC8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				3623ED8417F7638100387DC8 /* NSData+MachinedrumBundle.h */,
-				3623ED8517F7638100387DC8 /* NSData+MachinedrumBundle.m */,
-				3623ED8817F763CC00387DC8 /* NSBundle+MachinedrumBundle.h */,
-				3623ED8917F763CC00387DC8 /* NSBundle+MachinedrumBundle.m */,
 				36E188851874AA2800F84304 /* NSMutableArray+Reverse.h */,
 				36E188861874AA2800F84304 /* NSMutableArray+Reverse.m */,
 				36E188891874AA5E00F84304 /* NSArray+Reverse.h */,
 				36E1888A1874AA5E00F84304 /* NSArray+Reverse.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		3623EDB817F7BC7A00387DC8 /* MachinedrumBundle */ = {
-			isa = PBXGroup;
-			children = (
-				3623EDB917F7BC7A00387DC8 /* Supporting Files */,
-			);
-			path = MachinedrumBundle;
-			sourceTree = "<group>";
-		};
-		3623EDB917F7BC7A00387DC8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3623EDBA17F7BC7A00387DC8 /* MachinedrumBundle-Info.plist */,
-				3623EDBB17F7BC7A00387DC8 /* InfoPlist.strings */,
-				3623EDBE17F7BC7A00387DC8 /* MachinedrumBundle-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		362A7EDE159A160D007478D7 /* Process */ = {
@@ -852,13 +769,10 @@
 		36B920CF158F81670025F0B3 = {
 			isa = PBXGroup;
 			children = (
+				363EF2C618D3602300233B08 /* demos */,
 				36B920DF158F81670025F0B3 /* MachineDrumFramework */,
-				3623ED6D17F7617200387DC8 /* MachinedrumBundle */,
-				3623EDB817F7BC7A00387DC8 /* MachinedrumBundle */,
 				36B920DC158F81670025F0B3 /* Frameworks */,
 				36B920DB158F81670025F0B3 /* Products */,
-				3623ED9A17F76BD500387DC8 /* MachinedrumBundleMac copy-Info.plist */,
-				36260E62182FDA8D0038CE64 /* MachinedrumBundle copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -867,8 +781,6 @@
 			children = (
 				36B920DA158F81670025F0B3 /* libMachineDrumFramework-iOS.a */,
 				3631A8901646C3E4008DB7E5 /* libMachineDrumFramework-Mac.a */,
-				3623EDB517F7BC7900387DC8 /* MachinedrumBundle-Mac.bundle */,
-				36260E61182FDA8C0038CE64 /* MachinedrumBundle-iOS.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1082,40 +994,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3623EDB417F7BC7900387DC8 /* MachinedrumBundle-Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3623EDBF17F7BC7A00387DC8 /* Build configuration list for PBXNativeTarget "MachinedrumBundle-Mac" */;
-			buildPhases = (
-				3623EDB117F7BC7900387DC8 /* Sources */,
-				3623EDB217F7BC7900387DC8 /* Frameworks */,
-				3623EDB317F7BC7900387DC8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MachinedrumBundle-Mac";
-			productName = MachinedrumBundle;
-			productReference = 3623EDB517F7BC7900387DC8 /* MachinedrumBundle-Mac.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		36260E55182FDA8C0038CE64 /* MachinedrumBundle-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36260E5E182FDA8C0038CE64 /* Build configuration list for PBXNativeTarget "MachinedrumBundle-iOS" */;
-			buildPhases = (
-				36260E56182FDA8C0038CE64 /* Sources */,
-				36260E57182FDA8C0038CE64 /* Frameworks */,
-				36260E59182FDA8C0038CE64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MachinedrumBundle-iOS";
-			productName = MachinedrumBundle;
-			productReference = 36260E61182FDA8C0038CE64 /* MachinedrumBundle-iOS.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		3631A8571646C3E3008DB7E5 /* MachineDrumFramework-Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3631A88D1646C3E3008DB7E5 /* Build configuration list for PBXNativeTarget "MachineDrumFramework-Mac" */;
@@ -1175,8 +1053,6 @@
 			targets = (
 				36B920D9158F81670025F0B3 /* MachineDrumFramework-iOS */,
 				3631A8571646C3E3008DB7E5 /* MachineDrumFramework-Mac */,
-				3623EDB417F7BC7900387DC8 /* MachinedrumBundle-Mac */,
-				36260E55182FDA8C0038CE64 /* MachinedrumBundle-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1186,9 +1062,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3623EDA317F7B9D400387DC8 /* defaultKit.payload in Resources */,
-				3623EDAB17F7B9D400387DC8 /* defaultSound.payload in Resources */,
-				3623EDA717F7B9D400387DC8 /* defaultPattern.payload in Resources */,
+				3623EDA317F7B9D400387DC8 /* A4KitDefault.payload in Resources */,
+				3623EDAB17F7B9D400387DC8 /* A4SoundDefault.payload in Resources */,
+				3623EDA717F7B9D400387DC8 /* A4PatternDefault.payload in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,51 +1072,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3623EDA217F7B9D400387DC8 /* defaultKit.payload in Resources */,
-				3623EDAA17F7B9D400387DC8 /* defaultSound.payload in Resources */,
-				3623EDA617F7B9D400387DC8 /* defaultPattern.payload in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3623EDB317F7BC7900387DC8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3623EDBD17F7BC7A00387DC8 /* InfoPlist.strings in Resources */,
-				3623EDC217F7BCB700387DC8 /* defaultKit.payload in Resources */,
-				3623EDC417F7BCBC00387DC8 /* defaultSound.payload in Resources */,
-				3623EDC317F7BCB900387DC8 /* defaultPattern.payload in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36260E59182FDA8C0038CE64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36260E5A182FDA8C0038CE64 /* InfoPlist.strings in Resources */,
-				36260E5B182FDA8C0038CE64 /* defaultKit.payload in Resources */,
-				36260E5C182FDA8C0038CE64 /* defaultSound.payload in Resources */,
-				36260E5D182FDA8C0038CE64 /* defaultPattern.payload in Resources */,
+				3623EDA217F7B9D400387DC8 /* A4KitDefault.payload in Resources */,
+				3623EDAA17F7B9D400387DC8 /* A4SoundDefault.payload in Resources */,
+				3623EDA617F7B9D400387DC8 /* A4PatternDefault.payload in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3623EDB117F7BC7900387DC8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36260E56182FDA8C0038CE64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3631A8581646C3E3008DB7E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1290,7 +1130,6 @@
 				3631A8751646C3E3008DB7E5 /* MDPatternNodePosition.m in Sources */,
 				3631A8761646C3E3008DB7E5 /* MDPatternRegion.m in Sources */,
 				3631A8771646C3E3008DB7E5 /* MDUserParameterValue.m in Sources */,
-				3623ED8717F7638100387DC8 /* NSData+MachinedrumBundle.m in Sources */,
 				3631A8781646C3E3008DB7E5 /* MDUserParameterLimit.m in Sources */,
 				3631A8791646C3E3008DB7E5 /* MDPatternTrigGenerator.m in Sources */,
 				3631A87A1646C3E3008DB7E5 /* MDMachinedrumGlobalSettings.m in Sources */,
@@ -1349,7 +1188,6 @@
 				36431AAA17804B51007283A9 /* MDSongParser.m in Sources */,
 				36871BCE182DA17400750F0F /* A4Sequencer.m in Sources */,
 				366C9E35178D7525001545D9 /* A4PolyMapper.m in Sources */,
-				3623ED8B17F763CC00387DC8 /* NSBundle+MachinedrumBundle.m in Sources */,
 				36E23CB117DDF6CB00259EDC /* A4SysexHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1403,7 +1241,6 @@
 				36BBC1A915C0617F0087886B /* MDPatternNode.m in Sources */,
 				36BBC1AA15C0617F0087886B /* MDPatternNodePosition.m in Sources */,
 				36BBC1AD15C0617F0087886B /* MDPatternRegion.m in Sources */,
-				3623ED8617F7638100387DC8 /* NSData+MachinedrumBundle.m in Sources */,
 				36FE349715CEB55100695E38 /* MDUserParameterValue.m in Sources */,
 				36FE349A15CEB57200695E38 /* MDUserParameterLimit.m in Sources */,
 				364752F215D1AD63002DCA22 /* MDPatternTrigGenerator.m in Sources */,
@@ -1462,167 +1299,13 @@
 				36431AA917804B51007283A9 /* MDSongParser.m in Sources */,
 				36871BCD182DA17400750F0F /* A4Sequencer.m in Sources */,
 				366C9E34178D7525001545D9 /* A4PolyMapper.m in Sources */,
-				3623ED8A17F763CC00387DC8 /* NSBundle+MachinedrumBundle.m in Sources */,
 				36E23CB017DDF6CB00259EDC /* A4SysexHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		3623ED7017F7617200387DC8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3623ED7117F7617200387DC8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3623EDBB17F7BC7A00387DC8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3623EDBC17F7BC7A00387DC8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		3623EDC017F7BC7A00387DC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MachinedrumBundle/MachinedrumBundle-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "MachinedrumBundle/MachinedrumBundle-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "MachinedrumBundle-Mac";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		3623EDC117F7BC7A00387DC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MachinedrumBundle/MachinedrumBundle-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "MachinedrumBundle/MachinedrumBundle-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "MachinedrumBundle-Mac";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		36260E5F182FDA8C0038CE64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MachinedrumBundle/MachinedrumBundle-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "MachinedrumBundle copy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "MachinedrumBundle-iOS";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		36260E60182FDA8C0038CE64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MachinedrumBundle/MachinedrumBundle-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "MachinedrumBundle copy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "MachinedrumBundle-iOS";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		3631A88E1646C3E3008DB7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1802,24 +1485,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3623EDBF17F7BC7A00387DC8 /* Build configuration list for PBXNativeTarget "MachinedrumBundle-Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3623EDC017F7BC7A00387DC8 /* Debug */,
-				3623EDC117F7BC7A00387DC8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36260E5E182FDA8C0038CE64 /* Build configuration list for PBXNativeTarget "MachinedrumBundle-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36260E5F182FDA8C0038CE64 /* Debug */,
-				36260E60182FDA8C0038CE64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3631A88D1646C3E3008DB7E5 /* Build configuration list for PBXNativeTarget "MachineDrumFramework-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

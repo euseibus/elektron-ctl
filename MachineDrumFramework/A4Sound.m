@@ -9,7 +9,6 @@
 #import "A4Sound.h"
 #import "A4SysexHelper.h"
 #import "MDMath.h"
-#import "NSData+MachinedrumBundle.h"
 
 @implementation A4Sound
 
@@ -95,7 +94,10 @@
     
 	dispatch_once(&onceToken, ^{
         
-		soundData = [NSData dataFromMachinedrumBundleResourceWithName:@"defaultSound" ofType:@"payload"];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"A4SoundDefault" ofType:@"payload"]];
+		NSAssert(data != nil, @"default sound resource not found. copy the resource into your app resources group");
+		soundData = data;
+
 		
     });
 	

@@ -11,7 +11,6 @@
 #import "A4Sound.h"
 #import "A4Kit.h"
 #import "A4Pattern.h"
-#import "NSData+MachinedrumBundle.h"
 
 @implementation A4SysexHelper
 
@@ -48,7 +47,9 @@
 	
 	dispatch_once(&onceToken, ^{
         
-		defaultSoundData = [NSData dataFromMachinedrumBundleResourceWithName:@"defaultSound" ofType:@"payload"];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"A4SoundDefault" ofType:@"payload"]];
+		NSAssert(data != nil, @"default sound resource not found. copy the resource into your app resources group");
+		defaultSoundData = data;
 		
     });
 
@@ -69,7 +70,9 @@
 	
 	dispatch_once(&onceToken, ^{
         
-		defaultKitData = [NSData dataFromMachinedrumBundleResourceWithName:@"defaultKit" ofType:@"payload"];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"A4KitDefault" ofType:@"payload"]];
+		NSAssert(data != nil, @"default kit resource not found. copy the resource into your app resources group");
+		defaultKitData = data;
 		
     });
 	
