@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D7D272E-560C-41F5-8461-E2FA9A02005D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MachineDrumFramework</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2C5A0CFC-76BE-45E6-8274-A0561E56D206</key>
+		<string>https://github.com/jpenca/elektron-ctl.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MachineDrumFramework.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2C5A0CFC-76BE-45E6-8274-A0561E56D206</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jpenca/elektron-ctl.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2C5A0CFC-76BE-45E6-8274-A0561E56D206</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C5A0CFC-76BE-45E6-8274-A0561E56D206</string>
+			<key>IDESourceControlWCCName</key>
+			<string>elektron-ctl</string>
+		</dict>
+	</array>
+</dict>
+</plist>
