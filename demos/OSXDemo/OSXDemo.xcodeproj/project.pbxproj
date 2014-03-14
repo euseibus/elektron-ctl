@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		363EF2BF18D3513200233B08 /* A4KitDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2BE18D3513200233B08 /* A4KitDefault.payload */; };
-		363EF2C118D3513A00233B08 /* A4PatternDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2C018D3513A00233B08 /* A4PatternDefault.payload */; };
-		363EF2C318D3513E00233B08 /* A4SoundDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2C218D3513E00233B08 /* A4SoundDefault.payload */; };
+		363EF2F118D38DAC00233B08 /* libelektron-ctl-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 363EF2EE18D38D9A00233B08 /* libelektron-ctl-Mac.a */; };
+		363EF2F518D38DF800233B08 /* A4KitDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2F218D38DF800233B08 /* A4KitDefault.payload */; };
+		363EF2F618D38DF800233B08 /* A4PatternDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2F318D38DF800233B08 /* A4PatternDefault.payload */; };
+		363EF2F718D38DF800233B08 /* A4SoundDefault.payload in Resources */ = {isa = PBXBuildFile; fileRef = 363EF2F418D38DF800233B08 /* A4SoundDefault.payload */; };
 		36DDB87D18D34660005797FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DDB87C18D34660005797FD /* Cocoa.framework */; };
 		36DDB88718D34660005797FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36DDB88518D34660005797FD /* InfoPlist.strings */; };
 		36DDB88918D34660005797FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDB88818D34660005797FD /* main.m */; };
@@ -17,40 +18,40 @@
 		36DDB89018D34660005797FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDB88F18D34660005797FD /* AppDelegate.m */; };
 		36DDB89318D34660005797FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DDB89118D34660005797FD /* MainMenu.xib */; };
 		36DDB89518D34660005797FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36DDB89418D34660005797FD /* Images.xcassets */; };
-		36DDB8C318D346B4005797FD /* libMachineDrumFramework-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DDB8BA18D34683005797FD /* libMachineDrumFramework-Mac.a */; };
 		36DDB8C718D346B4005797FD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DDB8C418D346B4005797FD /* AudioToolbox.framework */; };
 		36DDB8C818D346B4005797FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DDB8C518D346B4005797FD /* AVFoundation.framework */; };
 		36DDB8C918D346B4005797FD /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DDB8C618D346B4005797FD /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		36DDB8B718D34683005797FD /* PBXContainerItemProxy */ = {
+		363EF2EB18D38D9A00233B08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */;
+			containerPortal = 363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 36B920DA158F81670025F0B3;
-			remoteInfo = "MachineDrumFramework-iOS";
+			remoteInfo = "elektron-ctl-iOS";
 		};
-		36DDB8B918D34683005797FD /* PBXContainerItemProxy */ = {
+		363EF2ED18D38D9A00233B08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */;
+			containerPortal = 363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3631A8901646C3E4008DB7E5;
-			remoteInfo = "MachineDrumFramework-Mac";
+			remoteInfo = "elektron-ctl-Mac";
 		};
-		36DDB8BF18D34691005797FD /* PBXContainerItemProxy */ = {
+		363EF2EF18D38DA300233B08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */;
+			containerPortal = 363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3631A8571646C3E3008DB7E5;
-			remoteInfo = "MachineDrumFramework-Mac";
+			remoteInfo = "elektron-ctl-Mac";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		363EF2BE18D3513200233B08 /* A4KitDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4KitDefault.payload; sourceTree = "<group>"; };
-		363EF2C018D3513A00233B08 /* A4PatternDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4PatternDefault.payload; sourceTree = "<group>"; };
-		363EF2C218D3513E00233B08 /* A4SoundDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4SoundDefault.payload; sourceTree = "<group>"; };
+		363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "elektron-ctl.xcodeproj"; path = "../../elektron-ctl.xcodeproj"; sourceTree = "<group>"; };
+		363EF2F218D38DF800233B08 /* A4KitDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4KitDefault.payload; sourceTree = "<group>"; };
+		363EF2F318D38DF800233B08 /* A4PatternDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4PatternDefault.payload; sourceTree = "<group>"; };
+		363EF2F418D38DF800233B08 /* A4SoundDefault.payload */ = {isa = PBXFileReference; lastKnownFileType = file; path = A4SoundDefault.payload; sourceTree = "<group>"; };
 		36DDB87918D34660005797FD /* OSXDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSXDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DDB87C18D34660005797FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		36DDB87F18D34660005797FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -66,7 +67,6 @@
 		36DDB89218D34660005797FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36DDB89418D34660005797FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		36DDB89B18D34661005797FD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MachineDrumFramework.xcodeproj; path = ../../MachineDrumFramework.xcodeproj; sourceTree = "<group>"; };
 		36DDB8C418D346B4005797FD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		36DDB8C518D346B4005797FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		36DDB8C618D346B4005797FD /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -77,10 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363EF2F118D38DAC00233B08 /* libelektron-ctl-Mac.a in Frameworks */,
 				36DDB8C718D346B4005797FD /* AudioToolbox.framework in Frameworks */,
 				36DDB8C818D346B4005797FD /* AVFoundation.framework in Frameworks */,
 				36DDB8C918D346B4005797FD /* CoreMIDI.framework in Frameworks */,
-				36DDB8C318D346B4005797FD /* libMachineDrumFramework-Mac.a in Frameworks */,
 				36DDB87D18D34660005797FD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,17 +91,26 @@
 		363EF2C418D3515100233B08 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				363EF2C218D3513E00233B08 /* A4SoundDefault.payload */,
-				363EF2C018D3513A00233B08 /* A4PatternDefault.payload */,
-				363EF2BE18D3513200233B08 /* A4KitDefault.payload */,
+				363EF2F218D38DF800233B08 /* A4KitDefault.payload */,
+				363EF2F318D38DF800233B08 /* A4PatternDefault.payload */,
+				363EF2F418D38DF800233B08 /* A4SoundDefault.payload */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		363EF2E718D38D9A00233B08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				363EF2EC18D38D9A00233B08 /* libelektron-ctl-iOS.a */,
+				363EF2EE18D38D9A00233B08 /* libelektron-ctl-Mac.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		36DDB87018D34660005797FD = {
 			isa = PBXGroup;
 			children = (
-				36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */,
+				363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */,
 				363EF2C418D3515100233B08 /* Resources */,
 				36DDB88218D34660005797FD /* OSXDemo */,
 				36DDB87B18D34660005797FD /* Frameworks */,
@@ -164,15 +173,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		36DDB8B118D34682005797FD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				36DDB8B818D34683005797FD /* libMachineDrumFramework-iOS.a */,
-				36DDB8BA18D34683005797FD /* libMachineDrumFramework-Mac.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,7 +187,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				36DDB8C018D34691005797FD /* PBXTargetDependency */,
+				363EF2F018D38DA300233B08 /* PBXTargetDependency */,
 			);
 			name = OSXDemo;
 			productName = OSXDemo;
@@ -216,8 +216,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 36DDB8B118D34682005797FD /* Products */;
-					ProjectRef = 36DDB8B018D34682005797FD /* MachineDrumFramework.xcodeproj */;
+					ProductGroup = 363EF2E718D38D9A00233B08 /* Products */;
+					ProjectRef = 363EF2E618D38D9A00233B08 /* elektron-ctl.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -228,18 +228,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		36DDB8B818D34683005797FD /* libMachineDrumFramework-iOS.a */ = {
+		363EF2EC18D38D9A00233B08 /* libelektron-ctl-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libMachineDrumFramework-iOS.a";
-			remoteRef = 36DDB8B718D34683005797FD /* PBXContainerItemProxy */;
+			path = "libelektron-ctl-iOS.a";
+			remoteRef = 363EF2EB18D38D9A00233B08 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		36DDB8BA18D34683005797FD /* libMachineDrumFramework-Mac.a */ = {
+		363EF2EE18D38D9A00233B08 /* libelektron-ctl-Mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libMachineDrumFramework-Mac.a";
-			remoteRef = 36DDB8B918D34683005797FD /* PBXContainerItemProxy */;
+			path = "libelektron-ctl-Mac.a";
+			remoteRef = 363EF2ED18D38D9A00233B08 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -249,9 +249,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				363EF2BF18D3513200233B08 /* A4KitDefault.payload in Resources */,
-				363EF2C118D3513A00233B08 /* A4PatternDefault.payload in Resources */,
-				363EF2C318D3513E00233B08 /* A4SoundDefault.payload in Resources */,
+				363EF2F518D38DF800233B08 /* A4KitDefault.payload in Resources */,
+				363EF2F618D38DF800233B08 /* A4PatternDefault.payload in Resources */,
+				363EF2F718D38DF800233B08 /* A4SoundDefault.payload in Resources */,
 				36DDB88718D34660005797FD /* InfoPlist.strings in Resources */,
 				36DDB89518D34660005797FD /* Images.xcassets in Resources */,
 				36DDB88D18D34660005797FD /* Credits.rtf in Resources */,
@@ -274,10 +274,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		36DDB8C018D34691005797FD /* PBXTargetDependency */ = {
+		363EF2F018D38DA300233B08 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "MachineDrumFramework-Mac";
-			targetProxy = 36DDB8BF18D34691005797FD /* PBXContainerItemProxy */;
+			name = "elektron-ctl-Mac";
+			targetProxy = 363EF2EF18D38DA300233B08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -344,7 +344,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../MachineDrumFramework/\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../elektron-ctl\"";
 			};
 			name = Debug;
 		};
@@ -377,7 +377,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../MachineDrumFramework/\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../elektron-ctl\"";
 			};
 			name = Release;
 		};
