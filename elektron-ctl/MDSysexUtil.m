@@ -212,7 +212,7 @@
 	
 	NSUInteger packedIdx = 0;
 	NSUInteger unpackedIdx = 0;
-	u_int8_t *buf = malloc(sizeof(uint8_t) * maxLen);
+	uint8_t *buf = malloc(sizeof(uint8_t) * maxLen);
 	
 	while (unpackedIdx < unpackedLen)
 	{
@@ -260,7 +260,7 @@
 	
 	NSUInteger packedIdx = 0;
 	NSUInteger unpackedIdx = 0;
-	u_int8_t *buf = malloc(sizeof(uint8_t) * maxLen);
+	uint8_t *buf = malloc(sizeof(uint8_t) * maxLen);
 	
 	while(packedIdx < packedLen)
 	{
