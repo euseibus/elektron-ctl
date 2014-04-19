@@ -148,6 +148,7 @@ A4SoundSettings;
 @property (nonatomic) A4SoundSettings *settings;
 
 + (instancetype)defaultSound;
++ (instancetype) soundWithSound:(A4Sound *)sound;
 - (BOOL) isDefaultSound;
 - (BOOL) isEqualToSound:(A4Sound *)sound;
 - (void) setParamValue:(A4PVal)value;

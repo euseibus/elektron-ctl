@@ -178,6 +178,8 @@
 	for (cnt = 0; cnt < inLength; cnt++)
 		if(cnt % 8) outLength++;
 	
+	if(!outLength) return nil;
+	
 	void *outBytes = malloc(outLength);
 	
 	for (cnt = 0; cnt < inLength; cnt++)
@@ -195,6 +197,104 @@
 	}
 	
 	return [NSData dataWithBytesNoCopy:outBytes length:outLength freeWhenDone:YES];
+}
+
++ (NSData *)dataPackedForMonomachine:(NSData *)inData
+{
+	NSUInteger maxLen = UINT16_MAX;
+	
+	if(inData.length > maxLen) return nil;
+	
+	const uint8_t *unpackedBytes = inData.bytes;
+	const NSUInteger unpackedLen = inData.length;
+	
+	if(unpackedLen < 1) return nil;
+	
+	NSUInteger packedIdx = 0;
+	NSUInteger unpackedIdx = 0;
+	u_int8_t *buf = malloc(sizeof(uint8_t) * maxLen);
+	
+	while (unpackedIdx < unpackedLen)
+	{
+		const uint8_t byteVal = unpackedBytes[unpackedIdx];
+		uint8_t cnt = 0;
+		if(byteVal & 0x80)
+		{
+			cnt = 1;
+		}
+		
+		while (unpackedIdx < unpackedLen-1)
+		{
+			if(unpackedBytes[unpackedIdx+1] == byteVal)
+			{
+				cnt += cnt ? 1 : 2;
+				unpackedIdx++;
+			}
+			else break;
+			if(cnt == 127) break;
+		}
+		
+		if(cnt)
+		{
+			buf[packedIdx++] = 0x80 | cnt;
+		}
+		unpackedIdx++;
+		buf[packedIdx++] = byteVal;
+	}
+	
+	NSData *packedData = [NSData dataWithBytes:buf length:packedIdx];
+	free(buf);
+	return packedData;
+}
+
++ (NSData *)dataUnpackedFromMonomachinePackedData:(NSData *)inData
+{
+	NSUInteger maxLen = UINT16_MAX;
+	
+	if(inData.length > maxLen) return nil;
+	
+	const uint8_t *packedBytes = inData.bytes;
+	const NSUInteger packedLen = inData.length;
+	
+	if(packedLen < 2) return nil;
+	
+	NSUInteger packedIdx = 0;
+	NSUInteger unpackedIdx = 0;
+	u_int8_t *buf = malloc(sizeof(uint8_t) * maxLen);
+	
+	while(packedIdx < packedLen)
+	{
+		if(packedBytes[packedIdx] & 0x80 && packedIdx < packedLen-1)
+		{
+			uint8_t repeat = packedBytes[packedIdx] & 0x7F;
+			
+			for(uint8_t i = 0; i < repeat; i++)
+			{
+				if(unpackedIdx >= maxLen)
+				{
+					free(buf);
+					return nil;
+				}
+				buf[unpackedIdx++] = packedBytes[packedIdx+1];
+			}
+			
+			packedIdx += 2;
+		}
+		else
+		{
+			buf[unpackedIdx++] = packedBytes[packedIdx++];
+		}
+		
+		if(unpackedIdx >= maxLen)
+		{
+			free(buf);
+			return nil;
+		}
+	}
+	
+	NSData *unpackedData = [NSData dataWithBytes:buf length:unpackedIdx];
+	free(buf);
+	return unpackedData;
 }
 
 + (NSMutableArray *)numbersFromBytes:(const char *)bytes withLength:(NSUInteger)length

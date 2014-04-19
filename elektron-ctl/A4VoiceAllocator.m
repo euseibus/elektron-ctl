@@ -33,13 +33,14 @@
 
 - (void) addGate:(GateEvent)gate
 {
+	/*
 	printf("adding gate with voices:\n%d\n%d\n%d\n%d\n",
 		   gate.voices[0],
 		   gate.voices[1],
 		   gate.voices[2],
 		   gate.voices[3]);
 	
-	
+	*/
 	if(_gatesLen == kNumMaxGates) return;
 	for(int i = 0; i < _gatesLen; i++)
 	{
@@ -99,7 +100,7 @@
 
 - (BOOL) freeVoice:(uint8_t)voice
 {
-	printf("freeing voice %d\n", voice);
+//	printf("freeing voice %d\n", voice);
 	if(voice == A4NULL) return NO;
 	
 	for(uint8_t i = 0; i < _usedVoicesLen; i++)
@@ -302,8 +303,11 @@
 					uint8_t voice = [self allocateSingleVoiceForGate:gates[gateIdx]];
 					
 					
-					printf("allocating voice %d to track %d note %d\n",
-						   voice, gates[gateIdx].track, noteIdx);
+					printf("allocating voice %d to track %d step %d note %d\n",
+						   voice,
+						   gates[gateIdx].track,
+						   gates[gateIdx].step,
+						   noteIdx);
 	
 					gates[gateIdx].voices[noteIdx] = voice;
 					

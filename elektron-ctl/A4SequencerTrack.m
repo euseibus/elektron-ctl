@@ -132,7 +132,8 @@ static void GateEventSetID(GateEvent *event)
 
 - (GateEvent)closeGate:(GateEvent)event
 {
-	return [self removeGateEvent:event];
+	event = [self removeGateEvent:event];
+	return event;
 }
 
 - (GateEvent) addGateEvent:(GateEvent) event

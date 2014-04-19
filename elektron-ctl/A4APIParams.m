@@ -127,7 +127,7 @@
 		return;
 	}
 	
-	A4PVal pval = A4PValMakeInvalid();
+	A4PVal pval;
 	if(paramValueTarget != A4NULL)
 		pval = trackIdx < 4 ? A4PValMake8(param, paramValueTarget) : A4PValFxMake16(param, paramValueTarget, 0);
 	else

@@ -25,6 +25,5 @@ A4Multimap;
 @property (nonatomic) double masterTune;
 @property (nonatomic) BOOL quantizeLiveRecording;
 @property (nonatomic) BOOL kitReloadOnChange;
-
 @property (nonatomic) BOOL midiClockReceive, midiClockSend;
 @end

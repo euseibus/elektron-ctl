@@ -105,6 +105,10 @@
 		364E548018C1F5310075FF19 /* A4BasslineGenerator2.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E547F18C1F5310075FF19 /* A4BasslineGenerator2.m */; };
 		364E548118C1F5310075FF19 /* A4BasslineGenerator2.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E547F18C1F5310075FF19 /* A4BasslineGenerator2.m */; };
 		365F419C1619EA5500E4231D /* MDSDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 365F419B1619EA5500E4231D /* MDSDS.m */; };
+		3668DB0718DA3D0500083660 /* MDPhrase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3668DB0618DA3D0500083660 /* MDPhrase.m */; };
+		3668DB0818DA3D0500083660 /* MDPhrase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3668DB0618DA3D0500083660 /* MDPhrase.m */; };
+		3668DB0B18DA40BD00083660 /* MDPatternSequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3668DB0A18DA40BD00083660 /* MDPatternSequencer.m */; };
+		3668DB0C18DA40BD00083660 /* MDPatternSequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3668DB0A18DA40BD00083660 /* MDPatternSequencer.m */; };
 		366C9E34178D7525001545D9 /* A4PolyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C9E33178D7525001545D9 /* A4PolyMapper.m */; };
 		366C9E35178D7525001545D9 /* A4PolyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C9E33178D7525001545D9 /* A4PolyMapper.m */; };
 		366CDA1018A795980086C27C /* SMF.m in Sources */ = {isa = PBXBuildFile; fileRef = 366CDA0F18A795980086C27C /* SMF.m */; };
@@ -327,6 +331,10 @@
 		364E547F18C1F5310075FF19 /* A4BasslineGenerator2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A4BasslineGenerator2.m; sourceTree = "<group>"; };
 		365F419A1619EA5500E4231D /* MDSDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSDS.h; sourceTree = "<group>"; };
 		365F419B1619EA5500E4231D /* MDSDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSDS.m; sourceTree = "<group>"; };
+		3668DB0518DA3D0500083660 /* MDPhrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPhrase.h; sourceTree = "<group>"; };
+		3668DB0618DA3D0500083660 /* MDPhrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPhrase.m; sourceTree = "<group>"; };
+		3668DB0918DA40BD00083660 /* MDPatternSequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPatternSequencer.h; sourceTree = "<group>"; };
+		3668DB0A18DA40BD00083660 /* MDPatternSequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPatternSequencer.m; sourceTree = "<group>"; };
 		366C9E32178D7525001545D9 /* A4PolyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A4PolyMapper.h; sourceTree = "<group>"; };
 		366C9E33178D7525001545D9 /* A4PolyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A4PolyMapper.m; sourceTree = "<group>"; };
 		366CDA0E18A795980086C27C /* SMF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMF.h; sourceTree = "<group>"; };
@@ -816,8 +824,7 @@
 				36814F011594CD8700220C88 /* MDConstants.h */,
 				36B920E0158F81670025F0B3 /* Supporting Files */,
 			);
-			name = "elektron-ctl";
-			path = elektron-ctl;
+			path = "elektron-ctl";
 			sourceTree = "<group>";
 		};
 		36B920E0158F81670025F0B3 /* Supporting Files */ = {
@@ -950,6 +957,10 @@
 		36D4192815BD9EB100DCFBCF /* PatternManipulation */ = {
 			isa = PBXGroup;
 			children = (
+				3668DB0918DA40BD00083660 /* MDPatternSequencer.h */,
+				3668DB0A18DA40BD00083660 /* MDPatternSequencer.m */,
+				3668DB0518DA3D0500083660 /* MDPhrase.h */,
+				3668DB0618DA3D0500083660 /* MDPhrase.m */,
 				36BBC1A315C0617F0087886B /* MDPatternCopiPasta.h */,
 				36BBC19E15C0617F0087886B /* MDPatternCopiPasta.m */,
 				36BBC19F15C0617F0087886B /* MDPatternNode.h */,
@@ -1009,7 +1020,7 @@
 			dependencies = (
 			);
 			name = "elektron-ctl-Mac";
-			productName = elektron-ctl;
+			productName = "elektron-ctl";
 			productReference = 3631A8901646C3E4008DB7E5 /* libelektron-ctl-Mac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -1027,7 +1038,7 @@
 			dependencies = (
 			);
 			name = "elektron-ctl-iOS";
-			productName = elektron-ctl;
+			productName = "elektron-ctl";
 			productReference = 36B920DA158F81670025F0B3 /* libelektron-ctl-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -1152,6 +1163,7 @@
 				3643BD3117E7B46500AA8663 /* A4Randomizer.m in Sources */,
 				3631A8831646C3E3008DB7E5 /* MDValueMap.m in Sources */,
 				3631A8841646C3E3008DB7E5 /* MDValuePair.m in Sources */,
+				3668DB0818DA3D0500083660 /* MDPhrase.m in Sources */,
 				36E188881874AA2800F84304 /* NSMutableArray+Reverse.m in Sources */,
 				36BEA64917E8AED600932018 /* A4RandomizerPreset.m in Sources */,
 				3680137318CBE3FD008DF4C4 /* A4APITrack.m in Sources */,
@@ -1178,6 +1190,7 @@
 				36AD3387184C0F4B0001E036 /* A4SequencerHelper.m in Sources */,
 				363D9C88175A3C7E00DC1ADF /* MDPatternPrivate.m in Sources */,
 				36E1C47818B9370900D9E6B1 /* A4BasslineGenerator.m in Sources */,
+				3668DB0C18DA40BD00083660 /* MDPatternSequencer.m in Sources */,
 				363D9C8E175A99CB00DC1ADF /* MDKitDiffs.m in Sources */,
 				363D9C90175A99CB00DC1ADF /* MDPatternDiffs.m in Sources */,
 				3680136F18CBC6A0008DF4C4 /* A4APITrig.m in Sources */,
@@ -1263,6 +1276,7 @@
 				364CD2C015F5157200CA49A9 /* MDSong.m in Sources */,
 				3643BD3017E7B46500AA8663 /* A4Randomizer.m in Sources */,
 				364CD2C415F515BF00CA49A9 /* MDValueMap.m in Sources */,
+				3668DB0718DA3D0500083660 /* MDPhrase.m in Sources */,
 				36E188871874AA2800F84304 /* NSMutableArray+Reverse.m in Sources */,
 				364CD2C715F5169F00CA49A9 /* MDValuePair.m in Sources */,
 				3680137218CBE3FD008DF4C4 /* A4APITrack.m in Sources */,
@@ -1289,6 +1303,7 @@
 				36AD3386184C0F4B0001E036 /* A4SequencerHelper.m in Sources */,
 				363D9C87175A3C7E00DC1ADF /* MDPatternPrivate.m in Sources */,
 				36E1C47718B9370900D9E6B1 /* A4BasslineGenerator.m in Sources */,
+				3668DB0B18DA40BD00083660 /* MDPatternSequencer.m in Sources */,
 				363D9C8D175A99CB00DC1ADF /* MDKitDiffs.m in Sources */,
 				363D9C8F175A99CB00DC1ADF /* MDPatternDiffs.m in Sources */,
 				3680136E18CBC6A0008DF4C4 /* A4APITrig.m in Sources */,
@@ -1313,7 +1328,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				DSTROOT = /tmp/elektron-ctl.dst;
+				DSTROOT = "/tmp/elektron-ctl.dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../libs/MagicalRecord/Project Files/iOS App Unit Tests/Frameworks\"",
@@ -1344,7 +1359,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				DSTROOT = /tmp/elektron-ctl.dst;
+				DSTROOT = "/tmp/elektron-ctl.dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../libs/MagicalRecord/Project Files/iOS App Unit Tests/Frameworks\"",
@@ -1428,7 +1443,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				DSTROOT = /tmp/elektron-ctl.dst;
+				DSTROOT = "/tmp/elektron-ctl.dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../libs/MagicalRecord/Project Files/iOS App Unit Tests/Frameworks\"",
@@ -1458,7 +1473,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				DSTROOT = /tmp/elektron-ctl.dst;
+				DSTROOT = "/tmp/elektron-ctl.dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../libs/MagicalRecord/Project Files/iOS App Unit Tests/Frameworks\"",

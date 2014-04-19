@@ -49,6 +49,26 @@
 	return NO;
 }
 
+- (void)openGateEvent:(GateEvent)gate
+{
+	gate = [_tracks[gate.track] openGate:gate];
+	[self.delegate a4Sequencer:self didOpenGate:gate];
+}
+
+- (void)closeGateEvent:(GateEvent)gate
+{
+	gate = [_tracks[gate.track] closeGate:gate];
+	if(gate.step > -1)
+	{
+		[self.delegate a4Sequencer:self didCloseGate:gate];
+	}
+}
+
+- (void) stealVoice:(uint8_t)voice noteIdx:(uint8_t)noteIdx gate:(GateEvent) affectedEvent
+{
+	[self.delegate a4Sequencer:self didStealVoice:voice noteIdx:noteIdx gate:affectedEvent];
+}
+
 - (void)clockTick
 {
 	[self handleMutes];
@@ -151,16 +171,15 @@
 			BOOL hasVoice = NO;
 			for(int j = 0; j < 4; j++)
 			{
-				if(_requestedOnEvents[i].voices[j] != A4NULL){ hasVoice = YES; break;}
+				GateEvent *event = &_requestedOnEvents[i];
+				if(event->voices[j] != A4NULL){ hasVoice = YES; break;}
 			}
 			if(hasVoice)
 			{
-				[_tracks[_requestedOnEvents[i].track] openGate:_requestedOnEvents[i]];
-				[self.delegate a4Sequencer:self didOpenGate:_requestedOnEvents[i]];
+				[self openGateEvent:_requestedOnEvents[i]];
 			}
 		}
 	}
-	
 }
 
 - (void) handleOffRequests
@@ -170,8 +189,7 @@
 		[self.voiceAllocator handleOffRequests:_requestedOffEvents len:_requestedOffEventsLen];
 		for(int i = 0; i < _requestedOffEventsLen; i++)
 		{
-			[_tracks[_requestedOffEvents[i].track] closeGate:_requestedOffEvents[i]];
-			[self.delegate a4Sequencer:self didCloseGate:_requestedOffEvents[i]];
+			[self closeGateEvent:_requestedOffEvents[i]];
 		}
 	}
 }
@@ -198,17 +216,13 @@
 	
 	if(didSteal)
 	{
-		[self.delegate a4Sequencer:self didStealVoice:voice noteIdx:noteIdx gate:affectedEvent];
+		[self stealVoice:voice noteIdx:noteIdx gate:affectedEvent];
 	}
 }
 
 - (void)a4VoiceAllocator:(A4VoiceAllocator *)allocator didNullifyGate:(GateEvent)event
 {
-	event = [_tracks[event.track] closeGate:event];
-	if(event.step > -1)
-	{
-		[self.delegate a4Sequencer:self didCloseGate:event];
-	}
+	[self closeGateEvent:event];
 }
 
 - (void) checkEndOfPattern
@@ -339,7 +353,7 @@
 - (void)setKit:(A4Kit *)kit
 {
 	_kit = kit;
-	DLog(@"name: %d", kit.name);
+	DLog(@"name: %@", kit.name);
 	self.voiceAllocator.mode = kit.polyphony->allocationMode;
 	uint8_t voices = kit.polyphony->activeVoices;
 	self.voiceAllocator.polyphonicVoices = voices;

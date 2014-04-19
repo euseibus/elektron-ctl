@@ -11,8 +11,11 @@
 @interface MDSysexUtil : NSObject
 
 + (NSData *) dataFromHexString:(NSString *)hexStr;
+
 + (NSData *) dataPackedWith7BitSysexEncoding:(NSData *)inData;
 + (NSData *) dataUnpackedFrom7BitSysexEncoding:(NSData *)inData;
++ (NSData *) dataPackedForMonomachine:(NSData *)inData;
++ (NSData *) dataUnpackedFromMonomachinePackedData:(NSData *)inData;
 + (NSMutableArray *)numbersFromBytes:(const char *)bytes withLength:(NSUInteger)length;
 + (NSData *) dataFromNumbersArray:(NSArray *)numbersArray;
 

@@ -97,6 +97,7 @@ void A4LocksRelease(A4PVal **locks);
 @property (nonatomic, readonly, copy) NSArray *soundLocks;
 
 + (A4Pattern *)defaultPattern;
++ (A4Pattern *)patternWithPattern:(A4Pattern *)pattern;
 
 - (void) setArpNoteLock:(uint8_t)n forNote: (uint8_t) i atStep:(uint8_t) step inTrack:(uint8_t)track;
 - (uint8_t) arpNoteLockForNote:(uint8_t) i atStep:(uint8_t) step inTrack:(uint8_t)track;
@@ -122,9 +123,9 @@ void A4LocksRelease(A4PVal **locks);
 - (A4PatternTrack *) track:(uint8_t)i;
 - (A4PatternTrack *) track:(uint8_t)i copy:(BOOL)copy;
 - (A4PatternTrack *) copyTrack:(A4PatternTrack *)track toIndex:(uint8_t)i;
+- (void) swapTrackAtIndex:(uint8_t)idxA withTrackAtIndex:(uint8_t)idxB;
 - (BOOL) isDefaultPattern;
 - (BOOL) isEqualToPattern:(A4Pattern *)pattern;
-
 - (void)replaceSoundLockIndex:(uint8_t)oldIndex withSoundLockIndex:(uint8_t)newIndex;
 
 @end

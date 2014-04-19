@@ -243,6 +243,15 @@ int16_t A4PValFxIntVal(A4PVal lockValue)
 	return intval;
 }
 
+A4PVal A4PValFxMake8(A4Param param, uint8_t coarse)
+{
+	A4PVal lockVal;
+	lockVal.param = param;
+	lockVal.coarse = coarse;
+	lockVal.fine = 0;
+	return lockVal;
+}
+
 
 /*
 A4PVal A4PValFxMin(A4Param param)
@@ -297,14 +306,7 @@ A4PVal A4PValFxMake(A4Param param, double doubleValue)
 	return A4PValFxSanitizeClamp(lockVal);
 }
 
-A4PVal A4PValFxMake8(A4Param param, uint8_t coarse)
-{
-	A4PVal lockVal;
-	lockVal.param = param;
-	lockVal.coarse = coarse;
-	lockVal.fine = 0;
-	return A4PValFxSanitizeClamp(lockVal);
-}
+
 
 A4PVal A4PValFxMake16(A4Param param, uint8_t coarse, int8_t fine)
 {

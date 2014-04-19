@@ -119,6 +119,13 @@
 												  onError:errorHandler];
 		}
 	}
+	else if ([t[0] isEqualToString:@"TRACK"] && [t[1] isEqualToString:@"SWAP"] && t.count == 4)
+	{
+		NSArray *args = [t subarrayWithRange:NSMakeRange(2, t.count-2)];
+		
+		[A4APITrack executeSwapCommandWithArgs:args
+								  onCompletion:completionHandler onError:errorHandler];
+	}
 	else if ([t[0] isEqualToString:@"TRACK"] && t.count > 1)
 	{
 		A4APIStringNumericIterator *trackIt =
@@ -169,16 +176,6 @@
 													  args:args
 											  onCompletion:completionHandler
 												   onError:errorHandler];
-		}
-		else if(trackIt.isValid && t.count >= 4 &&
-				([t[2] isEqualToString:@"ARPPATTERN"] || [t[2] isEqualToString:@"ARPP"]))
-		{
-			NSArray *args = [t subarrayWithRange:NSMakeRange(3, t.count-3)];
-			
-			[A4APITrack executeArpPatternCommandWithTrackIterator:trackIt
-															 args:args
-													 onCompletion:completionHandler
-														  onError:errorHandler];
 		}
 		else if(trackIt.isValid && t.count == 3)
 		{

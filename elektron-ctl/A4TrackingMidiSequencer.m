@@ -8,6 +8,7 @@
 
 #import "A4TrackingMidiSequencer.h"
 #import "A4Timepiece.h"
+#import "A4ControllerdataHandler.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface A4TrackingMidiSequencer()
@@ -16,26 +17,13 @@
 @implementation A4TrackingMidiSequencer
 
 
-/*
-
 + (instancetype)trackingSequencerWithDelegate:(id<A4TrackingMidiSequencerDelegate>)delegate outputDevice:(PGMidiDestination *)dst inputDevice:(PGMidiSource *)src
 {
 	A4TrackingMidiSequencer *instance = [self sequencerWithDelegate:delegate outputDevice:dst inputDevice:src];
-	instance.performanceMacroHandler.inputSource = src;
 	return instance;
 }
 
-- (void)setInputDevice:(PGMidiSource *)inputDevice
-{
-	[super setInputDevice:inputDevice];
-}
-
-- (void)a4VoiceAllocator:(A4VoiceAllocator *)allocator willStealVoice:(A4TrackVoicePair)voicePair
-{
-	DLog(@"track: %d, voice: %d", voicePair.track, voicePair.voice);
-}
-
-- (void)a4PerformanceMacroHandler:(A4PerformanceMacroHandler *)handler knob:(uint8_t)knob didChangeValue:(uint8_t)value
+- (void) a4ControllerdataHandler:(A4ControllerdataHandler *)handler performanceKnob:(uint8_t)knob didChangeValue:(uint8_t)value
 {
 	_sourceKit.macros[knob].value = value;
 	
@@ -80,6 +68,37 @@
 	}
 }
 
+
+- (void)openGateEvent:(GateEvent)gate
+{
+	[super openGateEvent:gate];
+	
+	double time = _time;
+	
+	dispatch_async(dispatch_get_main_queue(), ^{
+		
+		A4TrackerTrack *trackerTrack = self.trackerTracks[gate.track];
+		[trackerTrack openGate: gate context:TrigContextProperTrig time:time];
+		
+	});
+}
+
+- (void)closeGateEvent:(GateEvent)gate
+{
+	[super closeGateEvent:gate];
+	
+	double time = _time;
+	
+	dispatch_async(dispatch_get_main_queue(), ^{
+		
+		A4TrackerTrack *trackerTrack = self.trackerTracks[gate.track];
+		[trackerTrack closeGateWithContext:TrigContextProperTrig time:time];
+		
+	});
+}
+
+
+/*
 - (void)a4SequencerTrack:(A4SequencerTrack *)sequencerTrack didOpenGateWithTrig:(A4Trig)trig step:(uint8_t)step context:(TrigContext)ctxt
 {
 	if(sequencerTrack.trackIdx < 4)
@@ -152,7 +171,9 @@
 	}
 	[super a4SequencerTrack:sequencerTrack didCloseGateWithTrig:trig step:step context:ctxt];
 }
+ */
 
+/*
 - (void)a4SequencerTrack:(A4SequencerTrack *)sequencerTrack didOpenTriglessGateWithTrig:(A4Trig)trig step:(uint8_t)step
 {
 	if(sequencerTrack.trackIdx < 4)
@@ -220,6 +241,7 @@
 	}
 	[super a4SequencerTrack:sequencerTrack didCloseTriglessGateWithTrig:trig step:step];
 }
+*/
 
 - (id)init
 {
@@ -392,5 +414,5 @@
 		[track updateContinuousValuesWithTime:_time];
 	}
 }
-*/
+
 @end

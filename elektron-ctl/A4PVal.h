@@ -39,6 +39,7 @@ A4PVal A4PValMakeI(A4Param param, int16_t value);
 
 
 A4PVal A4PValFxMake16(A4Param param, uint8_t coarse, int8_t fine);
+A4PVal A4PValFxMake8(A4Param param, uint8_t coarse);
 A4PVal A4PValFxMakeI(A4Param param, int16_t value);
 int16_t A4PValFxIntVal(A4PVal lockValue);
 
@@ -48,7 +49,7 @@ A4PVal A4PValFxMax(A4Param param);
 A4PVal A4PValFxCentered(A4Param param);
 A4PVal A4PValFxSanitizeClamp(A4PVal val);
 A4PVal A4PValFxSanitizeWrap(A4PVal val);
-A4PVal A4PValFxMake8(A4Param param, uint8_t coarse);
+
 
 A4PVal A4PValFxMake(A4Param param, double val);
 A4PVal A4PValFxMakeNormalized(A4Param param, double normalizedDoubleValue);

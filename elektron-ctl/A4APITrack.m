@@ -15,6 +15,58 @@
 
 @implementation A4APITrack
 
++ (void)executeSwapCommandWithArgs:(NSArray *)args
+					  onCompletion:(void (^)(NSString *))completionHandler
+						   onError:(void (^)(NSString *))errorHandler
+{
+	if (args.count != 2)
+	{
+		errorHandler(@"INVALID PARAMS");
+		return;
+	}
+	
+	A4APIStringNumericIterator *itA =
+	[A4APIStringNumericIterator iteratorWithStringToken:args[0]
+												  range:A4ApiIteratorRangeMake(1, 6)
+												   mode:A4ApiIteratorRangeModeBreak
+												  inVal:A4ApiIteratorInputValInt
+												 retVal:A4ApiIteratorReturnValInt];
+	
+	A4APIStringNumericIterator *itB =
+	[A4APIStringNumericIterator iteratorWithStringToken:args[1]
+												  range:A4ApiIteratorRangeMake(1, 6)
+												   mode:A4ApiIteratorRangeModeBreak
+												  inVal:A4ApiIteratorInputValInt
+												 retVal:A4ApiIteratorReturnValInt];
+	
+	
+	if(!itA.isValid || !itB.isValid)
+	{
+		errorHandler(@"INVALID TRACK");
+		return;
+	}
+	
+	uint8_t idxA = itA.currentValue - 1, idxB = itB.currentValue - 1;
+	
+	if(idxA == idxB)
+	{
+		errorHandler(@"TRACKS ARE SAME");
+		return;
+	}
+	
+	
+	[A4Request requestWithKeys:@[@"pat.x"]
+			 completionHandler:^(NSDictionary *dict) {
+				 A4Pattern *pattern = dict[@"pat.x"];
+				 [pattern swapTrackAtIndex:idxA withTrackAtIndex:idxB];
+				 [pattern sendTemp];
+				 completionHandler([NSString stringWithFormat:@"SWAPPED TRACK %d WITH %d", idxA+1, idxB+1]);
+			 } errorHandler:^(NSError *err) {
+				 errorHandler(err.description);
+			 }];
+	
+}
+
 + (void) executeArpPatternCommandWithTrackIterator:(A4APIStringNumericIterator *)trackIt
 											  args:(NSArray *)args
 									  onCompletion:(void (^)(NSString *))completionHandler
@@ -33,13 +85,7 @@
 	BOOL setLength = NO;
 	u_int8_t length = 16;
 	
-	A4APIStringNumericIterator *stepIt = nil, *offsetIt = nil;
-	
-	NS_OPTIONS(NSUInteger, Flags)
-	{
-		flag_a_bit_too_big = 0x100
-	};
-	
+	A4APIStringNumericIterator *stepIt = nil, *offsetIt = nil, *enableIt = nil;
 	
 	
 	if(args.count == 2 && [args[0] isEqualToString:@"LENGTH"])
@@ -57,34 +103,59 @@
 			length = [it currentValue];
 		}
 	}
-	else if(args.count >= 4 && [args[0] isEqualToString:@"STEP"])
+	else if(args.count >= 3 && [args[0] isEqualToString:@"STEP"])
 	{
 		stepIt =
 		[A4APIStringNumericIterator iteratorWithStringToken:args[1]
-													  range:A4ApiIteratorRangeMake(0, 1)
+													  range:A4ApiIteratorRangeMake(1, 16)
 													   mode:A4ApiIteratorRangeModeBreak
 													  inVal:A4ApiIteratorInputValInt
 													 retVal:A4ApiIteratorReturnValInt];
 		
 		
-		if(stepIt.isValid)
+		if(stepIt.isValid && args.count == 3)
 		{
-			for(int i = 2; i < args.count; i+=2)
+			enableIt = [A4APIStringNumericIterator iteratorWithStringToken:args[2]
+																	 range:A4ApiIteratorRangeMake(0, 1)
+																	  mode:A4ApiIteratorRangeModeWrap
+																	 inVal:A4ApiIteratorInputValInt
+																	retVal:A4ApiIteratorReturnValInt];
+			
+			if(!enableIt.isValid)
 			{
+				errorHandler(@"INVALID ENABLE ENUMERATOR");
+				return;
+			}
+		}
+		else if(stepIt.isValid && args.count == 4)
+		{
+			if([args[2] isEqualToString:@"OFFSET"] ||
+			   [args[2] isEqualToString:@"OFF"] ||
+			   [args[2] isEqualToString:@"O"])
+			{
+				offsetIt = [A4APIStringNumericIterator iteratorWithStringToken:args[3]
+																		 range:A4ApiIteratorRangeMake(-64, 63)
+																		  mode:A4ApiIteratorRangeModeWrap
+																		 inVal:A4ApiIteratorInputValInt
+																		retVal:A4ApiIteratorReturnValInt];
 				
-				
-				
-				
+				if(![offsetIt isValid])
+				{
+					errorHandler(@"INVALID OFFSETS");
+					return;
+				}
 			}
 		}
 		else
 		{
 			errorHandler(@"INVALID ARGS");
+			return;
 		}
 	}
 	else
 	{
 		errorHandler(@"INVALID COMMAND");
+		return;
 	}
 	
 	
@@ -98,6 +169,26 @@
 					 [pattern track:trackIdx].arp->patternLength = length-1;
 				 }
 				 
+				 if(stepIt && enableIt)
+				 {
+					 while(stepIt.isValid)
+					 {
+						 [[pattern track:trackIdx] setArpPatternState:enableIt.currentValue atStep: stepIt.currentValue - 1];
+						 [stepIt increment];
+						 [enableIt increment];
+					 }
+				 }
+				 if(stepIt && offsetIt)
+				 {
+					 while(stepIt.isValid)
+					 {
+						 [pattern track:trackIdx].arp->patternOffsets[(uint8_t)stepIt.currentValue - 1]
+						 = (int8_t)offsetIt.currentValue;
+						 
+						 [stepIt increment];
+						 [offsetIt increment];
+					 }
+				 }
 				 
 				 [pattern sendTemp];
 				 completionHandler([NSString stringWithFormat:@"ARP PATTERN LENGTH %d", length]);
@@ -199,6 +290,23 @@
 							  onCompletion:(void (^)(NSString *))completionHandler
 								   onError:(void (^)(NSString *))errorHandler
 {
+	
+	if([args[0] isEqualToString:@"PATTERN"])
+	{
+		args = [args subarrayWithRange:NSMakeRange(1, args.count-1)];
+		[self executeArpPatternCommandWithTrackIterator:trackIt
+												   args:args
+										   onCompletion:completionHandler
+												onError:errorHandler];
+		return;
+	}
+	
+	
+	
+	
+	
+	
+	
 	if(!trackIt.isValid || (args.count && args.count%2 != 0) || !args.count)
 	{
 		errorHandler(@"INVALID COMMAND");

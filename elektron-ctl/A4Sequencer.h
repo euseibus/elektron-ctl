@@ -51,4 +51,6 @@ A4SequencerMode;
 - (void) stop;
 - (void) reset;
 - (void) clockTick;
+- (void) openGateEvent:(GateEvent)gate;
+- (void) closeGateEvent:(GateEvent)gate;
 @end

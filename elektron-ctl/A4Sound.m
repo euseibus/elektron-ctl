@@ -38,6 +38,11 @@
 	return instance;
 }
 
++ (instancetype)soundWithSound:(A4Sound *)sound
+{
+	return [self messageWithSysexData:sound.sysexData];
+}
+
 - (BOOL)isDefaultSound
 {
 	return [A4SysexHelper soundIsEqualToDefaultSound:self];

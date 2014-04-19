@@ -44,6 +44,11 @@
 	return kit;
 }
 
++ (instancetype)kitWithKit:(A4Kit *)kit
+{
+	return [self messageWithSysexData:kit.sysexData];
+}
+
 - (BOOL)isDefaultKit
 {
 	return [A4SysexHelper kitIsEqualToDefaultKit:self];

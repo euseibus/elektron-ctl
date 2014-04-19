@@ -1110,7 +1110,7 @@ static const A4Param modTargets[] =
 	A4ParamLfo2DpA,
 	A4ParamLfo2DpB,
 	
-	INT16_MIN
+	INT16_MIN // TODO: ???
 };
 
 

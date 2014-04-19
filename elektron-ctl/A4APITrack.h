@@ -11,6 +11,10 @@
 
 @interface A4APITrack : NSObject
 
++ (void) executeSwapCommandWithArgs:(NSArray *)args
+					   onCompletion:(void (^)(NSString *))completionHandler
+							onError:(void (^)(NSString *))errorHandler;
+
 + (void) executeArpPatternCommandWithTrackIterator:(A4APIStringNumericIterator *)trackIt
 											  args:(NSArray *)args
 									  onCompletion:(void (^)(NSString *))completionHandler

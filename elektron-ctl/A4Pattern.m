@@ -175,6 +175,11 @@ uint8_t A4PatternPulsesPerStepForTimescale(A4PatternTimeScale timeScale)
 	return p;
 }
 
++ (A4Pattern *)patternWithPattern:(A4Pattern *)pattern
+{
+	return [self messageWithSysexData:pattern.sysexData];
+}
+
 - (BOOL)isDefaultPattern
 {
 	return [A4SysexHelper patternIsEqualToDefaultPattern:self];
@@ -724,6 +729,62 @@ uint8_t A4PatternPulsesPerStepForTimescale(A4PatternTimeScale timeScale)
 			for(uint8_t lockIdx = 0; lockIdx < locksLen; lockIdx++)
 			{
 				[self setLock:locksBuf[lockIdx] atStep:newStepIdx inTrack:trackIdx];
+			}
+		}
+	}
+}
+
+- (void)swapTrackAtIndex:(uint8_t)idxA withTrackAtIndex:(uint8_t)idxB
+{
+	if(idxA == idxB) return;
+	
+	A4PVal lockBuf[128];
+	uint8_t locksLen;
+	
+		
+	A4Pattern *tmpPattern = [A4Pattern defaultPattern];
+	memmove([tmpPattern track:0].payload, [self track:idxA].payload, A4MessagePayloadLengthTrack);
+	memmove([tmpPattern track:1].payload, [self track:idxB].payload, A4MessagePayloadLengthTrack);
+	
+	for (int stepIdx = 0; stepIdx < 64; stepIdx++)
+	{
+		if(A4LocksForTrackAndStep(self, stepIdx, idxA, lockBuf, &locksLen))
+		{
+			for (uint8_t lockIdx = 0; lockIdx < locksLen; lockIdx++)
+			{
+				[tmpPattern setLock:lockBuf[lockIdx] atStep:stepIdx inTrack:0];
+			}
+		}
+		if(A4LocksForTrackAndStep(self, stepIdx, idxB, lockBuf, &locksLen))
+		{
+			for (uint8_t lockIdx = 0; lockIdx < locksLen; lockIdx++)
+			{
+				[tmpPattern setLock:lockBuf[lockIdx] atStep:stepIdx inTrack:1];
+			}
+		}
+	}
+	
+	[self clearAllLocksInTrack:idxA];
+	[self clearAllLocksInTrack:idxB];
+	
+	
+	memmove([self track:idxA].payload, [tmpPattern track:1].payload, A4MessagePayloadLengthTrack);
+	memmove([self track:idxB].payload, [tmpPattern track:0].payload, A4MessagePayloadLengthTrack);
+	
+	for (int stepIdx = 0; stepIdx < 64; stepIdx++)
+	{
+		if(A4LocksForTrackAndStep(tmpPattern, stepIdx, 1, lockBuf, &locksLen))
+		{
+			for (uint8_t lockIdx = 0; lockIdx < locksLen; lockIdx++)
+			{
+				[self setLock:lockBuf[lockIdx] atStep:stepIdx inTrack:idxA];
+			}
+		}
+		if(A4LocksForTrackAndStep(tmpPattern, stepIdx, 0, lockBuf, &locksLen))
+		{
+			for (uint8_t lockIdx = 0; lockIdx < locksLen; lockIdx++)
+			{
+				[self setLock:lockBuf[lockIdx] atStep:stepIdx inTrack:idxB];
 			}
 		}
 	}

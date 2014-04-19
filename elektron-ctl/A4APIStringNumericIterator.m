@@ -349,21 +349,27 @@ A4ApiIteratorRange A4ApiIteratorRangeMake(double min, double max)
 		}
 		else if (_mode == A4ApiIteratorRangeModeWrap)
 		{
+			double min = MIN(_start, _stop);
+			double max = MAX(_start, _stop);
+			
+			min = MAX(_range.min, min);
+			max = MIN(_range.max, max);
+			
 			double val = _retValType == A4ApiIteratorReturnValFloat ? _current : round(_current);
 			if(_retValType == A4ApiIteratorReturnValFloat)
 			{
-				if(_range.max != _range.min)
+				if(min != max)
 				{
-					while(val > _range.max) val -= (_range.max - _range.min) + 1;
-					while(val < _range.min) val += (_range.max - _range.min) + 1;
+					while(val > max) val -= (max - min) + 1;
+					while(val < min) val += (max - min) + 1;
 				}
 			}
 			else
 			{
-				if(_range.max != _range.min)
+				if(max != min)
 				{
-					while(round(_stop) > round(_range.max)) val -= (_range.max - _range.min) + 1;
-					while(round(val) < round(_range.min)) val += (_range.max - _range.min) + 1;
+					while(round(val) > round(max)) val -= (max - min) + 1;
+					while(round(val) < round(min)) val += (max - min) + 1;
 				}
 			}
 			return val;

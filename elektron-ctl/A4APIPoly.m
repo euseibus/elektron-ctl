@@ -26,13 +26,13 @@
 	NSString *allocString = nil;
 	
 	BOOL setTrkSounds = NO;
-	BOOL useTrkSounds;
+	BOOL useTrkSounds = NO;
 	
 	BOOL setDetune = NO;
-	uint8_t detune;
+	uint8_t detune = 0;
 	
 	BOOL setSpread = NO;
-	uint8_t spread;
+	uint8_t spread = 0;
 	
 	if(!args.count || args.count % 2)
 	{

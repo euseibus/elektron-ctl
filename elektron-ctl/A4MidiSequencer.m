@@ -111,13 +111,13 @@
 	}
 }
 
-/*
-- (void)a4SequencerTrack:(A4SequencerTrack *)sequencerTrack didOpenGateWithTrig:(A4Trig)trig step:(uint8_t)step context:(TrigContext)ctxt
+- (void)openGateEvent:(GateEvent)gate
 {
+	[super openGateEvent:gate];
+	
 	if(_outputDevice)
 	{
-		
-		uint8_t trackIdx = sequencerTrack.trackIdx;
+		uint8_t trackIdx = gate.track;
 		if(_holdingNote[trackIdx])
 		{
 			MidiNoteOn on = _noteOn[trackIdx];
@@ -126,35 +126,54 @@
 		}
 		
 		_noteOn[trackIdx].channel = _outputChannels[trackIdx];
-		_noteOn[trackIdx].note = trig.note;
-		_noteOn[trackIdx].velocity = trig.velocity;
-		_holdingNote[trackIdx] = YES;
-		MidiNoteOn on = _noteOn[trackIdx];
-		[_outputDevice sendNoteOn:on];
+		for(int n = 0; n < 4; n++)
+		{
+			if(gate.trig.notes[n] != A4NULL)
+			{
+				if(n == 0)
+					_noteOn[trackIdx].note = gate.trig.notes[n];
+				else
+					_noteOn[trackIdx].note = gate.trig.notes[0] + gate.trig.notes[n] - 0x40;
+				_noteOn[trackIdx].velocity = gate.trig.velocity;
+				_holdingNote[trackIdx] = YES;
+				MidiNoteOn on = _noteOn[trackIdx];
+				[_outputDevice sendNoteOn:on];
+			}
+		}
 	}
-
-//	[super a4SequencerTrack:sequencerTrack didOpenGateWithTrig:trig step:step context:ctxt];
 }
 
-- (void)a4SequencerTrack:(A4SequencerTrack *)sequencerTrack didCloseGateWithTrig:(A4Trig)trig step:(uint8_t)step context:(TrigContext)ctxt
-{	
+- (void)closeGateEvent:(GateEvent)gate
+{
 	if(_outputDevice)
 	{
-		
-		uint8_t trackIdx = sequencerTrack.trackIdx;
+		uint8_t trackIdx = gate.track;
 		_holdingNote[trackIdx] = NO;
 		
 		MidiNoteOn on;
 		on.channel = _outputChannels[trackIdx];
-		on.note = trig.note;
-		on.velocity = 0;
 		
-		[_outputDevice sendNoteOn:on];
+		for(int n = 0; n < 4; n++)
+		{
+			if(gate.trig.notes[n] != A4NULL)
+			{
+				if(n == 0)
+					on.note = gate.trig.notes[n];
+				else
+					on.note = gate.trig.notes[0] + gate.trig.notes[n] - 0x40;
+				
+				
+				printf("note off: %d\n", on.note);
+				
+				on.velocity = 0;
+				
+				[_outputDevice sendNoteOn:on];
+			}
+		}
 	}
 	
-//	[super a4SequencerTrack:sequencerTrack didCloseGateWithTrig:trig step:step context:ctxt];
+	[super closeGateEvent:gate];
 }
- */
 
 - (void)setOutputDevice:(PGMidiDestination *)outputDevice
 {

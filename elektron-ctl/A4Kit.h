@@ -47,6 +47,7 @@ A4PolySettings;
 @property (nonatomic) A4PolySettings *polyphony;
 
 + (instancetype)defaultKit;
++ (instancetype)kitWithKit:(A4Kit *)kit;
 - (BOOL) isDefaultKit;
 - (BOOL) isEqualToKit:(A4Kit *)kit;
 - (A4Sound *)soundAtTrack:(uint8_t)track copy:(BOOL)copy;
